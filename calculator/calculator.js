@@ -79,8 +79,8 @@ const addMinusPriority = (formula) => {
 };
 
 const calculate = (expression) => {
-  let formula = handleHighPriorityOperations(expression);
-  let result = handleLowPriorityOperations(formula);
+  let formula = multiplyDividePriority(expression);
+  let result = addMinusPriority(formula);
   return result;
 };
 
