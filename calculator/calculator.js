@@ -16,6 +16,8 @@ const showDisplayText = (input) => {
 const onclickNumberButton = (e) => {
   const clickedNumberValue = e.target.innerText;
   if (numbers.includes(clickedNumberValue)) showDisplayText(clickedNumberValue);
+  const answer = document.querySelector("#total");
+  answer.innerText = "";
 };
 
 const onclickOperationButton = (e) => {
@@ -27,7 +29,9 @@ const onclickOperationButton = (e) => {
 
 const clearButton = () => {
   const display = document.querySelector("#input");
-  display.innerText = ""; // 입력창 초기화
+  const answer = document.querySelector("#total");
+  display.innerText = "";
+  answer.innerText = "";
 };
 
 const deleteButton = () => {
