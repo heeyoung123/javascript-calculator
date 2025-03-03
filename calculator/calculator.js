@@ -90,6 +90,7 @@ const parseExpression = (expression) => {
 
 const equalButton = () => {
   const display = document.querySelector("#input");
+  const answer = document.querySelector("#total");
   let expression = display.innerText;
 
   if (!expression) return;
@@ -97,7 +98,7 @@ const equalButton = () => {
   let formula = parseExpression(expression);
   let result = calculate(formula);
 
-  display.innerText = result;
+  answer.innerText = result;
 };
 
 document.querySelector(".equal-button").addEventListener("click", equalButton);
